@@ -1,4 +1,5 @@
-﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -229,7 +230,19 @@
     <Content Include="assets\js\light-bootstrap-dashboard.js" />
     <Content Include="assets\js\moment.min.js" />
     <Content Include="assets\js\sweetalert2.js" />
+    <Content Include="assets\js\utilidades.js" />
     <Content Include="Global.asax" />
+    <Content Include="index.html" />
+    <Content Include="js\EspeciesEditar.js" />
+    <Content Include="js\EspeciesDetalle.js" />
+    <Content Include="js\EspeciesAgregar.js" />
+    <Content Include="js\ClasificacionAgregar.js" />
+    <Content Include="js\TiposAgregar.js" />
+    <Content Include="js\ClasificacionDetalle.js" />
+    <Content Include="js\ClasificacionEditar.js" />
+    <Content Include="js\TiposDetalle.js" />
+    <Content Include="js\TiposEditar.js" />
+    <Content Include="js\Especies.js" />
     <Content Include="plantilla\calendar.html" />
     <Content Include="plantilla\charts.html" />
     <Content Include="plantilla\components\buttons.html" />
@@ -258,7 +271,21 @@
     <Content Include="plantilla\tables\datatables.net.html" />
     <Content Include="plantilla\tables\extended.html" />
     <Content Include="plantilla\tables\regular.html" />
+
     <Content Include="View\index.html" />
+
+    <Content Include="ClasificacionAgregar.html" />
+    <Content Include="ClasificacionDetalle.html" />
+    <Content Include="ClasificacionEditar.html" />
+    <Content Include="Clasificacion.html" />
+    <Content Include="TiposDetalle.html" />
+    <Content Include="TiposEditar.html" />
+    <Content Include="TiposAgregar.html" />
+    <Content Include="Tipos.html" />
+    <Content Include="EspeciesDetalle.html" />
+    <Content Include="EspeciesEditar.html" />
+    <Content Include="EspeciesAgregar.html" />
+    <Content Include="Especies.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -340,6 +367,7 @@
     <Content Include="assets\sass\light-bootstrap-dashboard.scss" />
     <Content Include="plantilla\.DS_Store" />
     <Content Include="plantilla\tables\.DS_Store" />
+    <None Include="Properties\PublishProfiles\ZooAzureAppBST - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
