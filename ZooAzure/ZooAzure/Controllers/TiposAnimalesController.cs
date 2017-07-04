@@ -10,9 +10,28 @@ namespace ZooAzure.Controllers
     public class TiposAnimalesController : ApiController
     {
         // GET: api/TiposAnimales
-        public IEnumerable<string> Get()
+        public RespuestaApi Get()
         {
-            return new string[] { "value1", "value2" };
+            RespuestaApi resultado = new RespuestaApi();
+            List<TiposAnimales> TiposAnimales = new List<TiposAnimales>();
+            try
+            {
+                Db.Conectar();
+                if (Db.EstaLaConexionAbierta())
+                {
+                    TiposAnimales = Db.MostrarLosTiposDeAnimales();
+                }
+                resultado.Error = "";
+                Db.Desconectar();
+
+            }
+            catch (Exception)
+            {
+                resultado.Error = "Te estoy petando Bro!";
+            }
+            resultado.TotalElemento = TiposAnimales.Count;
+            resultado.TiposAnimales = TiposAnimales;
+            return resultado;
         }
 
         // GET: api/TiposAnimales/5

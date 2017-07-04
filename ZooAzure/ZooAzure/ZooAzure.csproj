@@ -1,4 +1,5 @@
-﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -230,6 +231,17 @@
     <Content Include="assets\js\moment.min.js" />
     <Content Include="assets\js\sweetalert2.js" />
     <Content Include="Global.asax" />
+    <Content Include="index.html" />
+    <Content Include="js\EspeciesEditar.js" />
+    <Content Include="js\EspeciesDetalle.js" />
+    <Content Include="js\EspeciesAgregar.js" />
+    <Content Include="js\ClasificacionAgregar.js" />
+    <Content Include="js\TiposAgregar.js" />
+    <Content Include="js\ClasificacionDetalle.js" />
+    <Content Include="js\ClasificacionEditar.js" />
+    <Content Include="js\TiposDetalle.js" />
+    <Content Include="js\TiposEditar.js" />
+    <Content Include="js\Especies.js" />
     <Content Include="plantilla\calendar.html" />
     <Content Include="plantilla\charts.html" />
     <Content Include="plantilla\components\buttons.html" />
@@ -258,6 +270,18 @@
     <Content Include="plantilla\tables\datatables.net.html" />
     <Content Include="plantilla\tables\extended.html" />
     <Content Include="plantilla\tables\regular.html" />
+    <Content Include="View\ClasificacionAgregar.html" />
+    <Content Include="View\ClasificacionDetalle.html" />
+    <Content Include="View\ClasificacionEditar.html" />
+    <Content Include="View\Clasificacion.html" />
+    <Content Include="View\TiposDetalle.html" />
+    <Content Include="View\TiposEditar.html" />
+    <Content Include="View\TiposAgregar.html" />
+    <Content Include="View\Tipos.html" />
+    <Content Include="View\EspeciesDetalle.html" />
+    <Content Include="View\EspeciesEditar.html" />
+    <Content Include="View\EspeciesAgregar.html" />
+    <Content Include="View\Especies.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -265,9 +289,14 @@
     <Compile Include="Controllers\ClasificacionController.cs" />
     <Compile Include="Controllers\EspeciesController.cs" />
     <Compile Include="Controllers\TiposAnimalesController.cs" />
+    <Compile Include="db\Db.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Clasificacion.cs" />
+    <Compile Include="Models\Especies.cs" />
+    <Compile Include="Models\RespuestaApi.cs" />
+    <Compile Include="Models\Tipos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -343,8 +372,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
-    <Folder Include="View\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
