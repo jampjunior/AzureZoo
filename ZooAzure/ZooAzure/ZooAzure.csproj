@@ -271,18 +271,18 @@
     <Content Include="plantilla\tables\datatables.net.html" />
     <Content Include="plantilla\tables\extended.html" />
     <Content Include="plantilla\tables\regular.html" />
-    <Content Include="View\ClasificacionAgregar.html" />
-    <Content Include="View\ClasificacionDetalle.html" />
-    <Content Include="View\ClasificacionEditar.html" />
-    <Content Include="View\Clasificacion.html" />
-    <Content Include="View\TiposDetalle.html" />
-    <Content Include="View\TiposEditar.html" />
-    <Content Include="View\TiposAgregar.html" />
-    <Content Include="View\Tipos.html" />
-    <Content Include="View\EspeciesDetalle.html" />
-    <Content Include="View\EspeciesEditar.html" />
-    <Content Include="View\EspeciesAgregar.html" />
-    <Content Include="View\Especies.html" />
+    <Content Include="ClasificacionAgregar.html" />
+    <Content Include="ClasificacionDetalle.html" />
+    <Content Include="ClasificacionEditar.html" />
+    <Content Include="Clasificacion.html" />
+    <Content Include="TiposDetalle.html" />
+    <Content Include="TiposEditar.html" />
+    <Content Include="TiposAgregar.html" />
+    <Content Include="Tipos.html" />
+    <Content Include="EspeciesDetalle.html" />
+    <Content Include="EspeciesEditar.html" />
+    <Content Include="EspeciesAgregar.html" />
+    <Content Include="Especies.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -364,6 +364,7 @@
     <Content Include="assets\sass\light-bootstrap-dashboard.scss" />
     <Content Include="plantilla\.DS_Store" />
     <Content Include="plantilla\tables\.DS_Store" />
+    <None Include="Properties\PublishProfiles\ZooAzureAppBST - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

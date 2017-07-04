@@ -4,7 +4,7 @@
         var id = window.location.search.substring(1).split('=')[1];
 
         // PREPARAR LA LLAMDA AJAX 
-        $.get(`/api/TiposAnimales`, function (respuesta, estado) {
+        $.get(`/api/TiposAnimal`, function (respuesta, estado) {
             // $('#resultado').html('');
             // COMPRUEBO EL ESTADO DE LA LLAMADA
             if (estado === 'success') {
@@ -22,7 +22,7 @@
 
     //Funicion para volver al listado
     $('#btnCancelartipo').click(function () {
-        window.location.href = '/View/Tipos.html';
+        window.location.href = 'Tipos.html';
     });
 
     //Funcion para actualizar la marca
@@ -32,7 +32,7 @@
 
         // var id = 0; //de momento le ponemos un 0 es temporal
         $.ajax({
-            url: `api/TiposAnimales`,
+            url: `api/TiposAnimal`,
             type: "POST",
             dataType: 'json',
             data: {
@@ -41,7 +41,7 @@
             success: function (respuesta) {
                 // SI LLEGO HASTA AQUÍ QUIERE DECIR
                 // ME REDIRECCIONO A LA LISTA DE MARCAS
-                window.location.href = './View/Tipos.html';
+                window.location.href = '.Tipos.html';
             },
             error: function (respuesta) {
                 console.log(respuesta);

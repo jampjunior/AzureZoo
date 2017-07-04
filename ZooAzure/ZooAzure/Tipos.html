@@ -473,7 +473,7 @@
                 {
                     title: 'ID',
                     data: 'idTipoAnimal',
-                   // visible: false
+                    visible: false
                 },
                 {
                     title: 'Tipo De Animal',
@@ -500,7 +500,7 @@
 
                 $('.view', row).unbind('click').bind('click', () => verDetalle(data.idTipoAnimal));
                 $('.edit', row).unbind('click').bind('click', () => editar(data.idTipoAnimal, row));
-                $('.remove', row).unbind('click').bind('click', () => eliminar(data.idTipoAnimal, row));
+                $('.remove', row).unbind('click').bind('click', () => eliminar(data.ididTipoAnimal, row));
 
                 return row;
             }
@@ -511,7 +511,7 @@
         });
 
         function verDetalle(id) {
-            window.location.href = `./TiposVista.html?id=${id}`;
+            window.location.href = `./TiposDetalle.html?id=${id}`;
         }
 
         function editar(id) {
