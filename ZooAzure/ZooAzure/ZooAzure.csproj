@@ -230,6 +230,7 @@
     <Content Include="assets\js\light-bootstrap-dashboard.js" />
     <Content Include="assets\js\moment.min.js" />
     <Content Include="assets\js\sweetalert2.js" />
+    <Content Include="assets\js\utilidades.js" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
     <Content Include="js\EspeciesEditar.js" />
