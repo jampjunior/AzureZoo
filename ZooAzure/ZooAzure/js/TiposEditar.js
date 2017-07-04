@@ -10,6 +10,8 @@
             if (estado === 'success') {
                 // SI LLEGO HASTA AQUÍ QUIERE DECIR
                 // QUE EN 'RESPUESTA' TENGO LA INFO
+              
+
                 $('#denominacion').val(respuesta.TiposAnimales[0].denominacion);
             }
             //var contenido = '';
@@ -36,7 +38,7 @@
             type: "PUT",
             dataType: 'json',
             data: {
-                id:$('#idTiposAnimal').val,
+                idTiposAnimal:$('#idTiposAnimal').val,
                 denominacion: $('#denominacion').val()
             },
             success: function (respuesta) {

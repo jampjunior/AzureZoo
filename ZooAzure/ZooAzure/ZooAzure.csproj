@@ -232,7 +232,6 @@
     <Content Include="assets\js\sweetalert2.js" />
     <Content Include="assets\js\utilidades.js" />
     <Content Include="Global.asax" />
-    <Content Include="index.html" />
     <Content Include="js\EspeciesEditar.js" />
     <Content Include="js\EspeciesDetalle.js" />
     <Content Include="js\EspeciesAgregar.js" />
@@ -271,9 +270,6 @@
     <Content Include="plantilla\tables\datatables.net.html" />
     <Content Include="plantilla\tables\extended.html" />
     <Content Include="plantilla\tables\regular.html" />
-
-    <Content Include="View\index.html" />
-
     <Content Include="ClasificacionAgregar.html" />
     <Content Include="ClasificacionDetalle.html" />
     <Content Include="ClasificacionEditar.html" />

@@ -86,7 +86,6 @@ namespace ZooAzure
             return resultado;
 
         }
-
         public static List<TiposAnimales> TiposPorId(long id)
         {
             List<TiposAnimales> resultado = new List<TiposAnimales>();
@@ -119,7 +118,6 @@ namespace ZooAzure
 
 
         }
-
         public static int Actualizartipos(long id, TiposAnimales TiposAnimales)
         {
             string procedimiento = "dbo.ActualizarTipoAnimal";
@@ -143,7 +141,6 @@ namespace ZooAzure
 
             return filasAfectadas;
         }
-
         public static int Agregaranimal(TiposAnimales TiposAnimales)
         {
             string procedimiento = "dbo.AgregarTipoAnimal";
@@ -159,7 +156,6 @@ namespace ZooAzure
 
             return filasAfectadas;
         }
-
         public static int Eliminartipo(long idTipoAnimal)
         {
             string procedimiento = "dbo.EliminarTipoAnimal";
@@ -266,7 +262,21 @@ namespace ZooAzure
             int filasAfectadas = comando.ExecuteNonQuery();
             return filasAfectadas;
         }
-      
+        public static int Eliminarclasi(long idClasificacion)
+        {
+            string procedimiento = "dbo.EliminarClasificacion";
+            SqlCommand comando = new SqlCommand(procedimiento, conexion);
+            comando.CommandType = CommandType.StoredProcedure;
+            SqlParameter parametro = new SqlParameter();
+            parametro.ParameterName = "idClasificacion";
+            parametro.SqlDbType = SqlDbType.BigInt;
+            parametro.SqlValue = idClasificacion; //el objeto de arriba  
+            comando.Parameters.Add(parametro);
+            int filasAfectadas = comando.ExecuteNonQuery();
+            return filasAfectadas;
+        }
+
+
         //Especies
 
         public static List<Especies> MuestrameLasEspecies()
