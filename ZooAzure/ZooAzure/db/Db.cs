@@ -394,30 +394,54 @@ namespace ZooAzure
             int filasAfectadas = comando.ExecuteNonQuery();
             return filasAfectadas;
         }
-        //public static int ActualizarEspecie(long id, Especies especies)
-        //{
-        //    string procedimiento = "dbo.ActualizarEspecie";
-        //    SqlCommand comando = new SqlCommand(procedimiento, conexion);
-        //    comando.CommandType = CommandType.StoredProcedure; //lo que te voy a pasar no es un select y es un PA
-        //    SqlParameter parametro = new SqlParameter();
-        //    parametro.ParameterName = "idClasificacion";
-        //    parametro.SqlDbType = SqlDbType.BigInt;
-        //    parametro.SqlValue = especies.idClasificacion; //donde quiero meter los parámetros  
-        //    comando.Parameters.Add(parametro);
-        //    poner dos parámetros
-        //    SqlParameter Denominacion = new SqlParameter();
-        //    Denominacion.ParameterName = "denominacion";
-        //    Denominacion.SqlDbType = SqlDbType.NVarChar;
-        //    Denominacion.SqlValue = especies.denominacion;
-        //    comando.Parameters.Add(Denominacion);
+        public static int ActualizarEspecie(long id, Especies especies)
+        {
+            string procedimiento = "dbo.ActualizarEspecie";
+            SqlCommand comando = new SqlCommand(procedimiento, conexion);
+            comando.CommandType = CommandType.StoredProcedure; //lo que te voy a pasar no es un select y es un PA
+
+            SqlParameter parametro = new SqlParameter();
+            parametro.ParameterName = "idEspecie";
+            parametro.SqlDbType = SqlDbType.BigInt;
+            parametro.SqlValue = especies.idEspecie;
+            comando.Parameters.Add(parametro);
+            //clasificacion
+            SqlParameter Denomina = new SqlParameter();
+            Denomina.ParameterName = "idClasificacion";
+            Denomina.SqlDbType = SqlDbType.BigInt;
+            Denomina.SqlValue = especies.clasificacion.idClasificacion;
+            comando.Parameters.Add(Denomina);
+            //idAnimal
+            SqlParameter Denominacion = new SqlParameter();
+            Denominacion.ParameterName = "idTipoAnimal";
+            Denominacion.SqlDbType = SqlDbType.BigInt;
+            Denominacion.SqlValue = especies.tipoAnimales.idTipoAnimal;
+            comando.Parameters.Add(Denominacion);
+            //nombre
+            SqlParameter Deno = new SqlParameter();
+            Deno.ParameterName = "nombre";
+            Deno.SqlDbType = SqlDbType.NVarChar;
+            Deno.SqlValue = especies.nombre;
+            comando.Parameters.Add(Deno);
+            //Patas
+            SqlParameter Denomi = new SqlParameter();
+            Denomi.ParameterName = "nPatas";
+            Denomi.SqlDbType = SqlDbType.SmallInt;
+            Denomi.SqlValue = especies.nPatas;
+            comando.Parameters.Add(Denomi);
+            //Mascota
+            SqlParameter masco = new SqlParameter();
+            masco.ParameterName = "esMascota";
+            masco.SqlDbType = SqlDbType.Bit;
+            masco.SqlValue = especies.esMascota;
+            comando.Parameters.Add(masco);
 
 
 
-        //    int filasAfectadas = comando.ExecuteNonQuery();
 
-
-        //    return filasAfectadas;
-        //}
+            int filasAfectadas = comando.ExecuteNonQuery();
+            return filasAfectadas;
+        }
         public static int EliminarEspecie(long idEspecie)
         {
             string procedimiento = "dbo.EliminarEspecie";

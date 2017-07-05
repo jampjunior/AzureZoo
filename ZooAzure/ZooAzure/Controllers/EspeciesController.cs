@@ -61,7 +61,7 @@ namespace ZooAzure.Controllers
 
         // POST: api/Especies
         [HttpPost]
-        public IHttpActionResult Post([FromBody]Especies especie)
+        public RespuestaApi Post([FromBody]Especies especie)
         {
             RespuestaApi respuesta = new RespuestaApi();
             respuesta.Error = "";
@@ -83,13 +83,39 @@ namespace ZooAzure.Controllers
                 respuesta.Error = "Te estoy petando Bro!";
             }
 
-            return Ok(respuesta);
+            return (respuesta);
 
         }
 
         // PUT: api/Especies/5
-        public void Put(int id, [FromBody]string value)
+        [HttpPut]
+        public RespuestaApi Put(int id, [FromBody]Especies especies)
         {
+            RespuestaApi respuesta = new RespuestaApi();
+            respuesta.Error = "";
+            int filasAfectadas = 0;
+            try
+            {
+                Db.Conectar();
+                if (Db.EstaLaConexionAbierta())
+                {
+                    filasAfectadas = Db.ActualizarEspecie(id, especies);
+
+                }
+                respuesta.TotalElemento = filasAfectadas;
+                Db.Desconectar();
+            }
+            catch (Exception ex)
+            {
+
+                respuesta.TotalElemento = 0;
+                respuesta.Error = "error al actualizar la marca";
+            }
+
+            return (respuesta);
+
+
+
         }
 
         // DELETE: api/Especies/5
