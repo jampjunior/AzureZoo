@@ -19,7 +19,7 @@ namespace ZooAzure
             try
             {
                 //CADENA DE CONEXIÓN A LA BD
-                string cadenaConexion = ConfigurationManager.ConnectionStrings["MiConexion"].ConnectionString;
+                string cadenaConexion = ConfigurationManager.ConnectionStrings["Simulacro"].ConnectionString;
                 //Creacion de la Conexión
                 conexion = new SqlConnection();
                 conexion.ConnectionString = cadenaConexion;

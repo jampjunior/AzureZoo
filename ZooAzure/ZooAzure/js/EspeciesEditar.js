@@ -22,8 +22,7 @@
             type: "PUT",
             dataType: 'json',
             data: {
-                
-                idEspecie: $('#especie').val(),
+                 
                 "clasificacion.idClasificacion": $('#clasificacion').val(),
                 "tipoAnimales.idTipoAnimal": $('#tipo').val(),
                 nombre: $('#nombre').val(),

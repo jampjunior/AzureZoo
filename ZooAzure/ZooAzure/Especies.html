@@ -313,7 +313,7 @@
                                 <div class="content">
                                     <div class="toolbar">
                                         <!--        Here you can write extra buttons/actions for the toolbar              -->
-                                        <button type="button" id="btnCreacoche" class="btn btn-info btn-fill btn-wd">Crear nuevo Coche</button>
+                                        <button type="button" id="btnCrearespe" class="btn btn-info btn-fill btn-wd">Crear nuevo Coche</button>
 
                                     </div>
                                     <div class="fresh-datatables">
@@ -417,9 +417,8 @@
 
 <!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
 <script src="../../assets/js/demo.js"></script>
-
-
 <script type="text/javascript">
+
     $(document).ready(function() {
 		$('#datatables').DataTable({
 		    "pagingType": "full_numbers",
@@ -430,22 +429,22 @@
 		    searchPlaceholder: "Buscar...", //es el cuadradtio de buscar
 		    },
 		    ajax: {
-		        url: '/api/Especies',
+                url: '/api/Especies',
                 dataSrc: 'especie' //donde viene la respuesta
 		    },
 		    columns: [
                 {
                     title: 'Numero',
-                    data: 'idEspecies', //lo que ba en la bd
+                    data: 'idEspecie', //lo que ba en la bd
                    // visible: false //me puede interesar que se enlace pero no se vea
                 },
                 {
                 title: 'clasificacion',
-                data: 'clasificacion.idClasificacion'
+                data: 'idClasificacion'
                 },
                 {
                      title: 'Tipos',
-                     data: 'tipoAnimales.idTipoAnimal'
+                     data: 'idTipoAnimal'
                  },
                 {
                     title: 'Nombre',
@@ -484,8 +483,8 @@
 		        console.log('data ->', data);
 
 		        $('.view', row).unbind('click').bind('click', () => verDetalle(data.idEspecie));
-                $('.edit', row).unbind('click').bind('click', () => editar(data.ididEspecie, row));
-                $('.remove', row).unbind('click').bind('click', () => eliminar(data.ididEspecie, row));
+                $('.edit', row).unbind('click').bind('click', () => editar(data.ididEspecie,row));
+                $('.remove', row).unbind('click').bind('click', () => eliminar(data.ididEspecie,row));
 
 		        return row;
 		    }
@@ -506,7 +505,7 @@
 		}
 
 
-		$('#btnCreacoche').click(function () {
+        $('#btnCrearespe').click(function () {
 		    window.location.href = `./EspeciesAgregar.html`;
 		});
 
