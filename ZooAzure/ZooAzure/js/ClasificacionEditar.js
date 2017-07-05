@@ -25,6 +25,7 @@
             type: "PUT",
             dataType: 'json',
             data: {
+                idClasificacion: $('#id').val(),
                 denominacion: $('#denominacion').val()
             },
             success: function (respuesta) {

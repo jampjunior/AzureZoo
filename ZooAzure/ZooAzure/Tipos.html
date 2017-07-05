@@ -476,7 +476,7 @@
                     visible: false
                 },
                 {
-                    title: 'Tipo De Animal',
+                    title: 'Denominacion',
                     data: 'denominacion'
                 },
                 {
@@ -497,16 +497,14 @@
             ]
             ,
             rowCallback: (row, data, index) => {
-                console.log('data ->', data);
 
                 $('.view', row).unbind('click').bind('click', () => verDetalle(data.idTipoAnimal));
-                $('.edit', row).unbind('click').bind('click', () => editar(data.idTipoAnimal,row));
-                $('.remove', row).unbind('click').bind('click', () => eliminar(data.idTipoAnimal,row));
+                $('.edit', row).unbind('click').bind('click', () => editar(data.idTipoAnimal, row));
+                $('.remove', row).unbind('click').bind('click', () => eliminar(data.idTipoAnimal, row));
 
                 return row;
             }
         });
-        var table = $('#datatables').DataTable();
 
         $('#btnCrear').click(function () {
             window.location.href = `./TiposAgregar.html`;
@@ -531,10 +529,10 @@
                         var table = $('#datatables').DataTable();
                         table.row(fila).remove().draw();
                         $(fila).fadeOut('slow');
-                        mensajes.showSwal('exito', 'Resultado', 'Tipo de Animal  eliminado correctamente.')
+                        mensajes.showSwal('exito', 'Resultado', 'Tipo de Animal eliminada correctamente.')
                     },
                     error: function (respuesta) {
-                        mensajes.showSwal('error', 'Resultado', 'No se pudo eliminar el Tipo de animal.')
+                        mensajes.showSwal('error', 'Resultado', 'No se pudo eliminar el Tipo de Animal.')
                     }
                 });
             }
@@ -542,5 +540,5 @@
     });
 
 </script>
-<script src="../assets/js/utilidades.js"></script>
+<script src="assets/js/utilidades.js"></script>
 </html>

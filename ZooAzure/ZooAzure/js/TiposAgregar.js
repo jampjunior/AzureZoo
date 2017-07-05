@@ -32,7 +32,7 @@
 
         // var id = 0; //de momento le ponemos un 0 es temporal
         $.ajax({
-            url: `api/TipoAnimal`,
+            url: `api/TiposAnimales`,
             type: "POST",
             dataType: 'json',
             data: {

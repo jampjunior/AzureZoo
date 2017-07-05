@@ -124,7 +124,7 @@ namespace ZooAzure.Controllers
 
         // DELETE: api/TipoAnimal/5
         [HttpDelete]
-        public RespuestaApi Delete(int idTipoAnimal)
+        public RespuestaApi Delete(int id)
         {
             RespuestaApi respuesta = new RespuestaApi();
             respuesta.Error = "";
@@ -134,7 +134,7 @@ namespace ZooAzure.Controllers
                 Db.Conectar();
                 if (Db.EstaLaConexionAbierta())
                 {
-                    filasAfectadas = Db.Eliminartipo(idTipoAnimal);
+                    filasAfectadas = Db.Eliminartipo(id);
                 }
                 respuesta.TotalElemento = filasAfectadas;
             }

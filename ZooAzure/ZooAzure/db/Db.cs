@@ -230,12 +230,12 @@ namespace ZooAzure
             string procedimiento = "dbo.ActualizarClasificacion";
             SqlCommand comando = new SqlCommand(procedimiento, conexion);
             comando.CommandType = CommandType.StoredProcedure; //lo que te voy a pasar no es un select y es un PA
-            //SqlParameter parametro = new SqlParameter();
-            //parametro.ParameterName = "idClasificacion";
-            //parametro.SqlDbType = SqlDbType.BigInt;
-            //parametro.SqlValue = clasificacion.idClasificacion; //donde quiero meter los parámetros  
-            //comando.Parameters.Add(parametro);
-            //poner dos parámetros
+            SqlParameter parametro = new SqlParameter();
+            parametro.ParameterName = "idClasificacion";
+            parametro.SqlDbType = SqlDbType.BigInt;
+            parametro.SqlValue = clasificacion.idClasificacion; //donde quiero meter los parámetros  
+            comando.Parameters.Add(parametro);
+           // poner dos parámetros
             SqlParameter Denominacion = new SqlParameter();
             Denominacion.ParameterName = "denominacion";
             Denominacion.SqlDbType = SqlDbType.NVarChar;

@@ -284,10 +284,22 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="header">
-                                    <legend>Editar Tipo de Animal</legend>
+                                    <legend>Editar Tipos de Animales</legend>
                                 </div>
                                 <div class="content">
                                     <form method="get" action="/" class="form-horizontal">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">Numero</label>
+                                                <div class="col-sm-10">
+                                                    <input id="tipoid" type="text" class="form-control">
+
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        
+                                        
+                                        
                                         <fieldset>
                                             <div class="form-group">
                                                 <label class="col-sm-2 control-label">Denominación</label>
@@ -296,26 +308,17 @@
 
                                                 </div>
                                             </div>
-                                            </fieldset>
+                                        </fieldset>
                                         <fieldset>
                                             <div class="form-group">
-                                                <label class="col-sm-2 control-label">Id</label>
-                                                <div class="col-sm-10">
-                                                    <input id="idTiposAnimal" type="text" class="form-control">
-
+                                                <label class="col-sm-2 control-label"></label>
+                                                <div class="col-sm-10" style="text-align:right">
+                                                    <button type="button" id="btnCancelartipo" class="btn btn-default btn-fill btn-wd">Cancelar</button>
+                                                    <button type="button" id="btnActualizartipo" class="btn btn-primary btn-fill btn-wd">Actualizar</button>
                                                 </div>
                                             </div>
                                         </fieldset>
-                                                <fieldset>
-                                                    <div class="form-group">
-                                                        <label class="col-sm-2 control-label"></label>
-                                                        <div class="col-sm-10" style="text-align:right">
-                                                            <button type="button" id="btnCancelar" class="btn btn-default btn-fill btn-wd">Cancelar</button>
-                                                            <button type="button" id="btnActualizar" class="btn btn-primary btn-fill btn-wd">Actualizar</button>
-                                                        </div>
-                                                    </div>
-                                                </fieldset>
-</form>
+                                    </form>
                                 </div>
                             </div>  <!-- end card -->
                         </div> <!-- end col-md-12 -->
@@ -395,7 +398,7 @@
 <script src="../../assets/js/light-bootstrap-dashboard.js"></script>
 <!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
 <!--<script src="../../assets/js/demo.js"></script>-->
-<script src="../assets/js/utilidades.js"></script>
-<script src="../js/TiposEditar.js"></script>
+<script src="./assets/js/utilidades.js"></script>
+<script src="./js/TiposEditar.js"></script>
 
 </html>
