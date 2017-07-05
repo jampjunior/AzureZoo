@@ -394,34 +394,21 @@ namespace ZooAzure
             int filasAfectadas = comando.ExecuteNonQuery();
             return filasAfectadas;
         }
-
-
-
-
-
-
-
-
-
-
-
-        
-
-        //public static int ActualizarClasi(long id, TiposAnimales tipoAnimales)
+        //public static int ActualizarEspecie(long id, Especies especies)
         //{
-        //    string procedimiento = "dbo.ActualizarClasificacion";
+        //    string procedimiento = "dbo.ActualizarEspecie";
         //    SqlCommand comando = new SqlCommand(procedimiento, conexion);
         //    comando.CommandType = CommandType.StoredProcedure; //lo que te voy a pasar no es un select y es un PA
         //    SqlParameter parametro = new SqlParameter();
         //    parametro.ParameterName = "idClasificacion";
         //    parametro.SqlDbType = SqlDbType.BigInt;
-        //    parametro.SqlValue = clasificacion.idClasificacion; //donde quiero meter los parámetros  
+        //    parametro.SqlValue = especies.idClasificacion; //donde quiero meter los parámetros  
         //    comando.Parameters.Add(parametro);
-        //    //poner dos parámetros
+        //    poner dos parámetros
         //    SqlParameter Denominacion = new SqlParameter();
         //    Denominacion.ParameterName = "denominacion";
         //    Denominacion.SqlDbType = SqlDbType.NVarChar;
-        //    Denominacion.SqlValue = clasificacion.denominacion;
+        //    Denominacion.SqlValue = especies.denominacion;
         //    comando.Parameters.Add(Denominacion);
 
 
@@ -431,6 +418,32 @@ namespace ZooAzure
 
         //    return filasAfectadas;
         //}
+        public static int EliminarEspecie(long idEspecie)
+        {
+            string procedimiento = "dbo.EliminarEspecie";
+            SqlCommand comando = new SqlCommand(procedimiento, conexion);
+            comando.CommandType = CommandType.StoredProcedure;
+            SqlParameter parametro = new SqlParameter();
+            parametro.ParameterName = "idEspecie";
+            parametro.SqlDbType = SqlDbType.BigInt;
+            parametro.SqlValue = idEspecie; //el objeto de arriba  
+            comando.Parameters.Add(parametro);
+            int filasAfectadas = comando.ExecuteNonQuery();
+            return filasAfectadas;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

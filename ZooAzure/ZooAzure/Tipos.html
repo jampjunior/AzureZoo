@@ -497,14 +497,16 @@
             ]
             ,
             rowCallback: (row, data, index) => {
+                console.log('data ->', data);
 
                 $('.view', row).unbind('click').bind('click', () => verDetalle(data.idTipoAnimal));
-                $('.edit', row).unbind('click').bind('click', () => editar(data.idTipoAnimal, row));
-                $('.remove', row).unbind('click').bind('click', () => eliminar(data.ididTipoAnimal, row));
+                $('.edit', row).unbind('click').bind('click', () => editar(data.idTipoAnimal,row));
+                $('.remove', row).unbind('click').bind('click', () => eliminar(data.idTipoAnimal,row));
 
                 return row;
             }
         });
+        var table = $('#datatables').DataTable();
 
         $('#btnCrear').click(function () {
             window.location.href = `./TiposAgregar.html`;
@@ -523,16 +525,16 @@
             if (confirm('Estás seguro de eliminar?')) {
 
                 $.ajax({
-                    url: `/api/TiposAnimales/${id}`,
+                    url: `/api/TipoAnimal/${id}`,
                     type: "DELETE",
                     success: function (respuesta) {
                         var table = $('#datatables').DataTable();
                         table.row(fila).remove().draw();
                         $(fila).fadeOut('slow');
-                        mensajes.showSwal('exito', 'Resultado', 'Marca eliminada correctamente.')
+                        mensajes.showSwal('exito', 'Resultado', 'Tipo de Animal  eliminado correctamente.')
                     },
                     error: function (respuesta) {
-                        mensajes.showSwal('error', 'Resultado', 'No se pudo eliminar la marca.')
+                        mensajes.showSwal('error', 'Resultado', 'No se pudo eliminar el Tipo de animal.')
                     }
                 });
             }

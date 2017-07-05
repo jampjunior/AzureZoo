@@ -61,7 +61,7 @@ namespace ZooAzure.Controllers
 
         // POST: api/Claificacion
         [HttpPost]
-        public IHttpActionResult Post([FromBody]Clasificacion clasificacion)
+        public RespuestaApi Post([FromBody]Clasificacion clasificacion)
         {
             RespuestaApi respuesta = new RespuestaApi();
             respuesta.Error = "";
@@ -83,13 +83,13 @@ namespace ZooAzure.Controllers
                 respuesta.Error = "Te estoy petando Bro!";
             }
 
-            return Ok(respuesta);
+            return (respuesta);
 
         }
 
         // PUT: api/Claificacion/5
         [HttpPut]
-        public IHttpActionResult Put(int id, [FromBody]Clasificacion clasificacion)
+        public RespuestaApi Put(int id, [FromBody]Clasificacion clasificacion)
         {
             RespuestaApi respuesta = new RespuestaApi();
             respuesta.Error = "";
@@ -112,7 +112,7 @@ namespace ZooAzure.Controllers
                 respuesta.Error = "error al actualizar la marca";
             }
 
-            return Ok(respuesta);
+            return (respuesta);
 
 
 
