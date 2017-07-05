@@ -59,7 +59,7 @@ namespace ZooAzure.Controllers
             return resultado;
         }
 
-        // POST: api/Claificacion
+        // POST: api/Clasificacion
         [HttpPost]
         public RespuestaApi Post([FromBody]Clasificacion clasificacion)
         {
@@ -87,7 +87,7 @@ namespace ZooAzure.Controllers
 
         }
 
-        // PUT: api/Claificacion/5
+        // PUT: api/Clasificacion/5
         [HttpPut]
         public RespuestaApi Put(int id, [FromBody]Clasificacion clasificacion)
         {
@@ -118,7 +118,7 @@ namespace ZooAzure.Controllers
 
         }
 
-        // DELETE: api/Claificacion/5
+        // DELETE: api/Clasificacion/5
         [HttpDelete]
         public RespuestaApi Delete(int id)
         {

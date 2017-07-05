@@ -118,7 +118,7 @@ namespace ZooAzure
 
 
         }
-        public static int Actualizartipos(long id, TiposAnimales TiposAnimales)
+        public static int Actualizartipos(int idTipoAnimal, TiposAnimales TiposAnimales)
         {
             string procedimiento = "dbo.ActualizarTipoAnimal";
             SqlCommand comando = new SqlCommand(procedimiento, conexion);
@@ -156,7 +156,7 @@ namespace ZooAzure
 
             return filasAfectadas;
         }
-        public static int Eliminartipo(long idTipoAnimal)
+        public static int Eliminartipo(int idTipoAnimal)
         {
             string procedimiento = "dbo.EliminarTipoAnimal";
             SqlCommand comando = new SqlCommand(procedimiento, conexion);
@@ -225,16 +225,16 @@ namespace ZooAzure
 
 
         }
-        public static int ActualizarClasi(long id, Clasificacion clasificacion)
+        public static int ActualizarClasi(int idClasificacion, Clasificacion clasificacion)
         {
             string procedimiento = "dbo.ActualizarClasificacion";
             SqlCommand comando = new SqlCommand(procedimiento, conexion);
             comando.CommandType = CommandType.StoredProcedure; //lo que te voy a pasar no es un select y es un PA
-            SqlParameter parametro = new SqlParameter();
-            parametro.ParameterName = "idClasificacion";
-            parametro.SqlDbType = SqlDbType.BigInt;
-            parametro.SqlValue = clasificacion.idClasificacion; //donde quiero meter los parámetros  
-            comando.Parameters.Add(parametro);
+            //SqlParameter parametro = new SqlParameter();
+            //parametro.ParameterName = "idClasificacion";
+            //parametro.SqlDbType = SqlDbType.BigInt;
+            //parametro.SqlValue = clasificacion.idClasificacion; //donde quiero meter los parámetros  
+            //comando.Parameters.Add(parametro);
             //poner dos parámetros
             SqlParameter Denominacion = new SqlParameter();
             Denominacion.ParameterName = "denominacion";
@@ -262,7 +262,7 @@ namespace ZooAzure
             int filasAfectadas = comando.ExecuteNonQuery();
             return filasAfectadas;
         }
-        public static int Eliminarclasi(long idClasificacion)
+        public static int Eliminarclasi(int idClasificacion)
         {
             string procedimiento = "dbo.EliminarClasificacion";
             SqlCommand comando = new SqlCommand(procedimiento, conexion);
@@ -394,7 +394,7 @@ namespace ZooAzure
             int filasAfectadas = comando.ExecuteNonQuery();
             return filasAfectadas;
         }
-        public static int ActualizarEspecie(long id, Especies especies)
+        public static int ActualizarEspecie(int idEspecie, Especies especies)
         {
             string procedimiento = "dbo.ActualizarEspecie";
             SqlCommand comando = new SqlCommand(procedimiento, conexion);
@@ -442,7 +442,7 @@ namespace ZooAzure
             int filasAfectadas = comando.ExecuteNonQuery();
             return filasAfectadas;
         }
-        public static int EliminarEspecie(long idEspecie)
+        public static int EliminarEspecie(int idEspecie)
         {
             string procedimiento = "dbo.EliminarEspecie";
             SqlCommand comando = new SqlCommand(procedimiento, conexion);

@@ -89,7 +89,7 @@ namespace ZooAzure.Controllers
 
         // PUT: api/TipoAnimal/5
         [HttpPut]
-        public RespuestaApi Put(int id, [FromBody]TiposAnimales TiposAnimales)
+        public RespuestaApi Put(int idTipoAnimal, [FromBody]TiposAnimales TiposAnimales)
         {
             RespuestaApi respuesta = new RespuestaApi();
             respuesta.Error = "";
@@ -101,7 +101,7 @@ namespace ZooAzure.Controllers
                 {
 
 
-                    filasAfectadas = Db.Actualizartipos(id, TiposAnimales);
+                    filasAfectadas = Db.Actualizartipos(idTipoAnimal, TiposAnimales);
 
 
 
@@ -124,7 +124,7 @@ namespace ZooAzure.Controllers
 
         // DELETE: api/TipoAnimal/5
         [HttpDelete]
-        public RespuestaApi Delete(int id)
+        public RespuestaApi Delete(int idTipoAnimal)
         {
             RespuestaApi respuesta = new RespuestaApi();
             respuesta.Error = "";
@@ -134,7 +134,7 @@ namespace ZooAzure.Controllers
                 Db.Conectar();
                 if (Db.EstaLaConexionAbierta())
                 {
-                    filasAfectadas = Db.Eliminartipo(id);
+                    filasAfectadas = Db.Eliminartipo(idTipoAnimal);
                 }
                 respuesta.TotalElemento = filasAfectadas;
             }
