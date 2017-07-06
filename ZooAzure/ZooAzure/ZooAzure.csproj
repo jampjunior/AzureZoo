@@ -287,7 +287,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ClasificacionController.cs" />
     <Compile Include="Controllers\EspeciesController.cs" />
-    <Compile Include="Controllers\TiposAnimalesController.cs" />
+    <Compile Include="Controllers\TipoAnimalController.cs" />
     <Compile Include="db\Db.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -372,6 +372,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

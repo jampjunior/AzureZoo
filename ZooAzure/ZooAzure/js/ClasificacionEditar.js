@@ -1,13 +1,10 @@
 ﻿$(document).ready(function () {
     // defino la funcion que consultara los datos del api
-  
+
         var id = window.location.search.substring(1).split('=')[1];
 
         // PREPARAR LA LLAMDA AJAX 
-       
-    
-
-
+  
     //Funicion para volver al listado
     $('#btnCancelar').click(function () {
         window.location.href = '/Clasificacion.html';

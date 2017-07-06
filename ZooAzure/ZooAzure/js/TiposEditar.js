@@ -19,11 +19,11 @@
 
         // var id = 0; //de momento le ponemos un 0 es temporal
         $.ajax({
-            url: ` api/TipoAnimal/${id}`,
+            url: ` api/TipoAnimal${id}`,
             type: "PUT",
             dataType: 'json',
             data: {
-                idTipoAnimal: $('#tipoid').val(),
+               // idTipoAnimal: $('#tipoid').val(),
                 denominacion: $('#denominacion').val()
             },
             success: function (respuesta) {

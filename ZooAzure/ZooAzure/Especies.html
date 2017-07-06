@@ -429,8 +429,8 @@
 		    searchPlaceholder: "Buscar...", //es el cuadradtio de buscar
 		    },
 		    ajax: {
-                url: '/api/Especies',
-                dataSrc: 'especie' //donde viene la respuesta
+		        url: '/api/Especies',
+		        dataSrc: 'especie' //donde viene la respuesta
 		    },
 		    columns: [
                 {
@@ -483,8 +483,8 @@
 		        console.log('data ->', data);
 
 		        $('.view', row).unbind('click').bind('click', () => verDetalle(data.idEspecie));
-                $('.edit', row).unbind('click').bind('click', () => editar(data.ididEspecie,row));
-                $('.remove', row).unbind('click').bind('click', () => eliminar(data.ididEspecie,row));
+                $('.edit', row).unbind('click').bind('click', () => editar(data.idEspecie,row));
+                $('.remove', row).unbind('click').bind('click', () => eliminar(data.idEspecie,row));
 
 		        return row;
 		    }

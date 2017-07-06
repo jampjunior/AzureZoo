@@ -7,9 +7,9 @@ using System.Web.Http;
 
 namespace ZooAzure.Controllers
 {
-    public class TiposAnimalesController : ApiController
+    public class TipoAnimalController : ApiController
     {
-        // GET: api/TiposAnimales
+        // GET: api/TipoAnimal
         public RespuestaApi Get()
         {
             RespuestaApi resultado = new RespuestaApi();
@@ -34,7 +34,7 @@ namespace ZooAzure.Controllers
             return resultado;
         }
 
-        // GET: api/TiposAnimales/5
+        // GET: api/TiposAnimal/5
         public RespuestaApi Get(long id)
         {
             RespuestaApi resultado = new RespuestaApi();
@@ -58,7 +58,7 @@ namespace ZooAzure.Controllers
             resultado.TiposAnimales = tipo;
             return resultado;
         }
-       
+
         // POST: api/TipoAnimal
         [HttpPost]
         public RespuestaApi Post([FromBody]TiposAnimales TiposAnimales)
